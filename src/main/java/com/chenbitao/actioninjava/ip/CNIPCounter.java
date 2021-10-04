@@ -2,6 +2,7 @@ package com.chenbitao.actioninjava.ip;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -21,7 +22,7 @@ public class CNIPCounter {
   /**
    * 要存放在本地的路径和文件，请根据自己的实际情况来修改
    */
-  private final String CHNROUTES_PATH = "E:\\";
+  private final String CHNROUTES_PATH = "/Users/peter/Downloads/";
   private final String CHNROUTES_FILENAME = "chnroutes.txt";
 
   private final String CHARSET = "UTF-8";
@@ -61,7 +62,9 @@ public class CNIPCounter {
       }
       return (int) (acc + Math.pow(2, 32 - count));
     });
-    System.out.println(ipCount.get());
+    BigInteger bigInt = new BigInteger("256");
+    System.out.println("预计全球IP地址共：" +  bigInt.pow(4).toString(10));
+    System.out.println("今日中国IP活跃个数：" + ipCount.get());
   }
 
 }
