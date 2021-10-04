@@ -1,7 +1,7 @@
-package com.chenbitao.actioninjava;
+package com.chenbitao.actioninjava.algorithm.structure.linked;
 
 public class LinkedList<T> {
-	Node<T> node;
+	Node<T> head;
 	class Node<E> {
 		E data;
 		Node<E> next;
