@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.chenbitao</groupId>
-  <artifactId>actioninjava</artifactId>
+  <artifactId>java-in-action</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -32,7 +32,7 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>[2.7,)</version>
+      <version>2.7</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
