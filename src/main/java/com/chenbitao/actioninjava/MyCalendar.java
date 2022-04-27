@@ -14,23 +14,23 @@ public class MyCalendar {
     public static void printCalendar() {
 //        System.out.println("请输入4位年份");
 //        Scanner input = new Scanner(System.in);
-//        int nian = input.nextInt();
+//        int year = input.nextInt();
 //        System.out.println("请输入月份");
-//        int yue = input.nextInt();
-        int nian = 2022;
-        int yue = 2;
+//        int month = input.nextInt();
+        int year = 2022;
+        int month = 4;
 
-        System.out.println("\t\t\t" + nian + "," + yue);
+        System.out.println("\t\t\t" + year + "," + month);
         System.out.println("----------------------------------------------------------");
-        System.out.println("星期日    星期一    星期二    星期三    星期四    星期五    星期六");
+        System.out.println("星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六");
 
         // 1号前边先打印几个 \t,打印几个呢 应该是getTotalDays(年,月)
-        int spaces = getTotalDays(nian, yue) % 7;
+        int spaces = getTotalDays(year, month) % 7;
         for (int i = 0; i < spaces; i++) {
             System.out.print("\t");
         }
 
-        int days = getDaysOfMonth(nian, yue);
+        int days = getDaysOfMonth(year, month);
         for (int i = 1; i <= days; i++) {
             System.out.print(i + "\t");
             if ((i + spaces) % 7 == 0) {
@@ -67,27 +67,27 @@ public class MyCalendar {
          * if(isRun(year)){ return 29; }else{ return 28; } }else{ return 0; }
          */
         switch (month) {
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            return 31;
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            return 30;
-        case 2:
-            if (isRun(year)) {
-                return 29;
-            } else {
-                return 28;
-            }
-        default:
-            return 0;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+            case 2:
+                if (isRun(year)) {
+                    return 29;
+                } else {
+                    return 28;
+                }
+            default:
+                return 0;
         }
     }
 

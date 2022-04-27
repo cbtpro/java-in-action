@@ -2,17 +2,15 @@ package com.chenbitao.actioninjava;
 
 /**
  * Hello world!
- *
  */
 public class App {
-	public static void main( String[] args )
-    {
-    	BitCalc bc = new BitCalc();
+    public static void main(String[] args) {
+        BitCalc bc = new BitCalc();
         int a = 1110;
         int b = 100;
         System.out.println(bc.and(a, b));
         System.out.println(bc.and(1111, 100));
-        System.out.println(a&b);
+        System.out.println(a & b);
         System.out.println();
         /**
          * 4 转换成二进制 100
@@ -50,6 +48,6 @@ public class App {
         int g = 0xFFFF; // 8进制表示的十进制的65535
         int h = 0xFF; // 8进制表示的十进制的255
         System.out.println(bc.and(g, h));
-        System.out.println(0xFFFF&0xFF);
+        System.out.println(0xFFFF & 0xFF);
     }
 }
